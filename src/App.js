@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
  * import Woojin from "./assignments/woojin";
  */
 import Example from "./assignments/example";
+import Todo from "./assignments/example";
 
 function App() {
   return (
@@ -15,10 +16,17 @@ function App() {
             ex) <Route path="/woojin" element={<Woojin />} />
         */}
         <Route
-          path="/"
+          path='/todo'
+          element={<Todo />}
+        />
+        <Route
+          path='/'
           element={<div>App.js와 example.js를 확인해주세요.</div>}
         />
-        <Route path="/example" element={<Example />} />
+        <Route
+          path='/example'
+          element={<Example />}
+        />
       </Routes>
     </Router>
   );
